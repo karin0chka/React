@@ -1,0 +1,25 @@
+.searchForm input{
+    width: 500px;
+    height: 40px;
+    padding:5px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 0;
+}
+.searchForm .submitButton{
+    padding: 6px 45px 6px 45px;
+    margin: 7px;
+    border-radius: 10px;
+    background-color: rgb(59, 153, 59);
+    border:rgb(7, 75, 7) ;
+    color: white;
+    font-family: "Schibsted Grotesk", sans-serif;
+}
+.searchForm .curTemp{
+    padding: 6px 16px 6px 16px;
+    border-radius: 10px;
+    background-color: rgb(221, 61, 61);
+    border: red;
+    color: white;
+    font-family: "Schibsted Grotesk", sans-serif;
+}

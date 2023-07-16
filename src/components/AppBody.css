@@ -1,0 +1,19 @@
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.appBody{
+    width: 800px;
+    height: 500px;
+    border:1px solid black ;
+    border-radius: 5px;
+    background-color: #adb6b7;
+}
+.date{
+    font-size: large;
+    padding:5px 0px 0px 10px;
+    font-style: italic;
+    
+}

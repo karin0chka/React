@@ -1,0 +1,29 @@
+.Description{
+   margin: 0px 0px 0px 10px;
+   font-family: "Schibsted Grotesk", sans-serif;
+   float: left;
+}
+.Description p{
+    margin: 0;
+}
+.Description .cityName{
+    font-size: 45px;
+   
+}
+.Description .weatherDescription{
+    font-style: italic;
+    font-size: 23px;
+}
+.Description .showTemp{
+    font-size: 40px;
+}
+.Description .units{
+    position: relative;
+    font-size: 20px;
+    top: -23px;
+    padding: 5px;
+}
+div .weatherSituation{
+    float: right;
+    margin: 0px 130px 0px 0px ;
+}
