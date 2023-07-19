@@ -12,7 +12,7 @@ export default function AppBody(){
                 <p class="date">Sunday 17:52</p>
                 <CityList />
                 <Search />
-                <Description />
+                <Description temperature={10}/>
                 </div>    
         </div>
     )

@@ -14,6 +14,7 @@
     border:rgb(7, 75, 7) ;
     color: white;
     font-family: "Schibsted Grotesk", sans-serif;
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
 .searchForm .curTemp{
     padding: 6px 16px 6px 16px;
@@ -22,4 +23,21 @@
     border: red;
     color: white;
     font-family: "Schibsted Grotesk", sans-serif;
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+.searchForm .submitButton:hover {background-color: #3e8e41}
+
+.searchForm .submitButton:active {
+  background-color:rgb(59, 153, 59);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.searchForm .curTemp:hover {
+    background-color:rgb(221, 61, 61);
+}
+
+.searchForm .curTemp:active {
+  background-color: rgb(221, 61, 61);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

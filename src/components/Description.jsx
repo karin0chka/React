@@ -1,25 +1,34 @@
-import React from "react";
+import React,{ useState }  from "react";
 import "./Description.css";
 
-export default function Temperature() {
+export default function Temperature(props) {
+    let [temperature, setTemperature] = useState(props.temperature);
+    function showFahrenheit(event) {
+        event.preventDefault();
+        setTemperature(Math.round(props.temperature * 9) / 5 + 32);
+      }
+      function showCelsius(event){
+        event.preventDefault()
+        setTemperature(props.temperature)
+      }
   return (
     <div>
       <div className="Description">
-        <p className="cityName">London</p>
+        <p className="cityName">{props.city}</p>
         <p className="weatherDescription">Overcast Clouds</p>
 
         <div className="showTemp">
           <i class="fa-solid fa-cloud-sun-rain"></i>
-          <strong>19</strong>
-          <span class="units">
-            <a href="#" id="celsius-link" class="active">
-              °C{" "}
+          <strong>{temperature}</strong>
+          <section class="units" >
+            <a href="#" id="celsius-link" onClick={showCelsius}>
+              °C
             </a>
             |
-            <a href="#" id="fahrenheit-link">
+            <a href="#" id="fahrenheit-link" onClick={showFahrenheit}>
               °F
             </a>
-          </span>
+          </section>
         </div>
       </div>
       <section class="weatherSituation">
