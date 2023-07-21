@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import "./Search.css";
-import SearchResult from "./SearchResult";
 
 export default function Search() {
   const [city, setCity] = useState("");
@@ -17,6 +16,7 @@ export default function Search() {
     <div>
     <form class="searchForm" onSubmit={handleSubmit}>
       <input type="search" placeholder="Enter your city" id="type-city" 
+      value={city}
       onChange={updateCity}/>
       <button type="submit" class="submitButton">
         Search
@@ -26,7 +26,7 @@ export default function Search() {
         Curent
       </button>
     </form>
-    {city && <SearchResult city={city} />}
+    <h4 className="searshResult">{city}</h4>
     </div>
   );
 }
