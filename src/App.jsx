@@ -10,8 +10,7 @@ export default function App() {
     <div className="App">
       <Header />
       <AppBody />
-      <GitHub />
-     
+      <GitHub />  
     </div>
   );
 }

@@ -3,30 +3,39 @@ import "./Search.css";
 
 export default function Search() {
   const [city, setCity] = useState("");
+  const [submittedCity, setSubmitedCity] = useState("")
+  function updateCity(e){
+    setCity(e.target.value)
+  }
+  
   function handleSubmit(event) {
-    event.preventDefault();
-
+    if(city !== ""){
+      event.preventDefault()
+      setSubmitedCity(city)
+      setCity("")
+    }else{
+      alert("Please enter a city");
   }
-  function updateCity(event){
-    setCity(event.target.value)
   }
-
 
   return (
-    <div>
-    <form class="searchForm" onSubmit={handleSubmit}>
+    <>
+      <div className="formPoz">
+    <form className="searchForm" onSubmit={handleSubmit}>
       <input type="search" placeholder="Enter your city" id="type-city" 
       value={city}
       onChange={updateCity}/>
-      <button type="submit" class="submitButton">
+      <button type="submit" className="submitButton">
         Search
       </button>
-
-      <button class="curTemp" id="currentTemperature">
+    </form>
+      <button className="curTemp" id="currentTemperature">
         Curent
       </button>
-    </form>
-    <h4 className="searshResult">{city}</h4>
-    </div>
+      </div>
+    {submittedCity !== "" && (
+        <h4 className="searchResult">{`It is currently 20°C in ${submittedCity}`}</h4>
+      )}
+    </>
   );
 }

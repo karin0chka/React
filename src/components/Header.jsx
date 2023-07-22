@@ -5,7 +5,7 @@ import "./Header.css"
 export default function Header(){
     return (
         <div className="Header">
-            <h1 class="pageName">TempSense</h1>
+            <h1 className="pageName">TempSense</h1>
         </div>
     )
 }

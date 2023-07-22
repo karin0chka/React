@@ -1,4 +1,14 @@
-.searchForm input{
+.formPoz{
+  display:flex;
+  flex-direction: row;
+
+}
+.searchForm{
+  display: flex;
+  width: 100%;
+}
+
+.searchForm #type-city{
     width: 500px;
     height: 40px;
     padding:5px;
@@ -8,7 +18,7 @@
 }
 .searchForm .submitButton{
     padding: 6px 45px 6px 45px;
-    margin: 7px;
+    margin: 10px;
     border-radius: 10px;
     background-color: rgb(59, 153, 59);
     border:rgb(7, 75, 7) ;
@@ -16,8 +26,9 @@
     font-family: "Schibsted Grotesk", sans-serif;
     box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
-.searchForm .curTemp{
-    padding: 6px 16px 6px 16px;
+.formPoz .curTemp{
+    margin: 10px;
+    width: 100%;
     border-radius: 10px;
     background-color: rgb(221, 61, 61);
     border: red;
@@ -32,11 +43,11 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-.searchForm .curTemp:hover {
+.curTemp:hover {
     background-color:rgb(221, 61, 61);
 }
 
-.searchForm .curTemp:active {
+.curTemp:active {
   background-color: rgb(221, 61, 61);
   box-shadow: 0 5px #666;
   transform: translateY(4px);

@@ -18,9 +18,9 @@ export default function Temperature(props) {
         <p className="weatherDescription">Overcast Clouds</p>
 
         <div className="showTemp">
-          <i class="fa-solid fa-cloud-sun-rain"></i>
+          <i className="fa-solid fa-cloud-sun-rain"></i>
           <strong>{temperature}</strong>
-          <section class="units" >
+          <section className="units" >
             <a href="#" id="celsius-link" onClick={showCelsius}>
               °C
             </a>
@@ -31,7 +31,7 @@ export default function Temperature(props) {
           </section>
         </div>
       </div>
-      <section class="weatherSituation">
+      <section className="weatherSituation">
         <p  id="weatherSituation">
           Humidity: 89%
           <br />

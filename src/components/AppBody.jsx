@@ -9,7 +9,7 @@ export default function AppBody(){
     return(
         <div className="Container">
             <div className="appBody">
-                <p class="date">Sunday 17:52</p>
+                <p className="date">Sunday 17:52</p>
                 <CityList />
                 <Search />
                 <Description temperature={10}/>
