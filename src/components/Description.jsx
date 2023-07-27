@@ -1,43 +1,30 @@
-import React,{ useState }  from "react";
+import React from "react";
 import "./Description.css";
+import Units from "./Units";
 
-export default function Temperature(props) {
-    let [temperature, setTemperature] = useState(props.temperature);
-    function showFahrenheit(event) {
-        event.preventDefault();
-        setTemperature(Math.round(props.temperature * 9) / 5 + 32);
-      }
-      function showCelsius(event){
-        event.preventDefault()
-        setTemperature(props.temperature)
-      }
+export default function Description({ currentWeather }) {
+  async function displayWeatherDescription() {}
   return (
-    <div>
-      <div className="Description">
-        <p className="cityName">{props.city}</p>
-        <p className="weatherDescription">Overcast Clouds</p>
-
-        <div className="showTemp">
-          <i className="fa-solid fa-cloud-sun-rain"></i>
-          <strong>{temperature}</strong>
-          <section className="units" >
-            <a href="#" id="celsius-link" onClick={showCelsius}>
-              °C
-            </a>
-            |
-            <a href="#" id="fahrenheit-link" onClick={showFahrenheit}>
-              °F
-            </a>
-          </section>
+    <>
+      {currentWeather && (
+        <div className="Description">
+          <div className="gridItemOne">
+              <h1>{currentWeather.name}</h1>
+            <p className="weatherDescription" style={{textTransform:'capitalize'}}>
+              {currentWeather.weather[0].description}
+            </p>
+            {!!currentWeather}
+            <p id="weatherSituation">
+              Humidity: {currentWeather.main.humidity}%
+              <br />
+              Wind speed: {Math.round(currentWeather.wind.speed)} mph
+            </p>
+          </div>
+          <div className="gridItemTwo">
+            <Units temperature={Math.round(currentWeather.main.temp)} />
+          </div>
         </div>
-      </div>
-      <section className="weatherSituation">
-        <p  id="weatherSituation">
-          Humidity: 89%
-          <br />
-          Wind speed: 8 mph
-        </p>
-      </section>
-    </div>
+      )}
+    </>
   );
 }

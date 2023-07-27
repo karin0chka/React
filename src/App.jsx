@@ -5,12 +5,16 @@ import AppBody from "./components/AppBody";
 import GitHub from "./components/GitHub";
 
 
+
 export default function App() {
   return (
-    <div className="App">
-      <Header />
-      <AppBody />
-      <GitHub />  
-    </div>
+    <>
+      <div className="App">
+        <Header />
+        <AppBody />
+        <GitHub />
+        
+      </div>
+    </>
   );
 }

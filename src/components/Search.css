@@ -6,6 +6,31 @@
 .searchForm{
   display: flex;
   width: 100%;
+  position: relative;
+}
+.searchForm ul {
+  width: 300px;
+  top: 45px;
+  left: 20px;
+  padding: 10px 25px !important;
+  position: absolute;
+  background-color: white;
+  border-bottom: 5px;
+}
+.searchForm ul li {
+  padding: 3px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+.searchForm ul li:hover {
+  z-index: 9;
+  font-weight: 900;
+  transform: scale(1.05);
+  margin-left: 12px !important;
+}
+.searchForm ul li:active {
+  transform: scale(1.01);
+  margin-left: 4px !important;
 }
 
 .searchForm #type-city{
@@ -55,4 +80,7 @@
 .searshResult{
   font-size: 40px;
   margin: 10px;
+}
+.searchResult{
+  font-size: 40px;
 }
