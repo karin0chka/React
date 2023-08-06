@@ -8,10 +8,12 @@ export default function Search({getApiData}) {
   const [cityList, setCityList] = useState(null);
 
   function updateCity(e) {
+
     setCity(e.target.value);
   }
 
   async function handleSubmit(event) {
+    
     event.preventDefault();
     if (city) {
       const response = await api.getCityList(city);
